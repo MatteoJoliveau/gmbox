@@ -1,4 +1,4 @@
-import staticAdapter from "@sveltejs/adapter-static";
+import adapter from "@sveltejs/adapter-static";
 import preprocess from "svelte-preprocess";
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -8,7 +8,10 @@ const config = {
   preprocess: preprocess(),
 
   kit: {
-    adapter: staticAdapter(),
+    adapter: adapter({
+      fallback: '200.html'
+    }),
+    prerender: { entries: [] }
   },
 };
 

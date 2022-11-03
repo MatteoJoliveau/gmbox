@@ -1,0 +1,13 @@
+setup:
+    cargo check
+
+clean:
+    cargo clean
+
+fmt: _fmt _clippy
+
+_fmt:
+  cargo fmt
+
+_clippy:
+  cargo clippy --fix --allow-dirty --allow-staged

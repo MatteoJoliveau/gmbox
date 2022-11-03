@@ -29,7 +29,12 @@
           gtk3
           libsoup
           webkitgtk
+          nodejs-18_x
           nodePackages.pnpm
+          just
+          lld
+          sqlite-web
+          sqlite-interactive
         ];
       in
       {
